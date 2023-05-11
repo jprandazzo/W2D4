@@ -1,18 +1,19 @@
 require "byebug"
 
 def flatten(data)
-    # arr = []
-    # debugger
-    # if !data.is_a? Array
-    #   arr << data
-    #   return
-    # end
-    data.each do |e| 
+    if !data.is_a? Array
+        data
+    else
+        something
+    end
+    data.map do |e| 
+        arr = []
         if e.is_a? Array
             flatten(e)
         else
-            e
+            arr << e
         end
+        arr
     end
     # arr
   end
